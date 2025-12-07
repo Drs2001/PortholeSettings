@@ -9,7 +9,7 @@ ApplicationWindow {
     visible: true
     title: "Settings"
     
-    color: "black"
+    color: palette.active.window
     StackView {
         id: rootStack
         initialItem: "Home.qml" // We initialize with the file directly as QML automatically wraps seperate files as components
