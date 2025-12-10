@@ -10,13 +10,16 @@ ColumnLayout {
         Layout.fillHeight: true
         
         Grid {
+            id: buttonsGrid
+            property var settingsButtonWidth: 275
+            property var buttonLeftRightMargins: 20
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.top: parent.top
             anchors.topMargin: 10
             anchors.bottomMargin: 10
-            
-            columns: Math.max(1, Math.floor((parent.width - 20) / (275 + 10)))
             spacing: 10
+            
+            columns: Math.max(1, Math.floor((parent.width - buttonsGrid.buttonLeftRightMargins) / (buttonsGrid.settingsButtonWidth + buttonsGrid.spacing)))
             horizontalItemAlignment: Grid.AlignHCenter
             
             Repeater {
@@ -30,7 +33,7 @@ ColumnLayout {
                 
                 Button {
                     id: settingsButton
-                    implicitWidth: 275
+                    implicitWidth: buttonsGrid.settingsButtonWidth
                     implicitHeight: 75
                     
                     background: Rectangle {
