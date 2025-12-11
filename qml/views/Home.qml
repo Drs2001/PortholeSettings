@@ -80,21 +80,16 @@ ColumnLayout {
                     text: model.icon + " " + model.name
                     
                     onClicked: {
-                        var source = getCategorySource(model.name)
-                        if(source != ""){
-                            rootStack.push(source)
+                        switch(model.name) {
+                            case "System":
+                                rootStack.push("SystemSettings.qml")
+                                break
+                            default:
+                                console.log("Page not defined")
                         }
                     }
                 }
             }
         }
-    }
-    
-    function getCategorySource(categoryName) {
-        // Map category names to QML files
-        var sourceMap = {
-            "System": "SystemSettings.qml",
-        }
-        return sourceMap[categoryName] || ""
     }
 }
