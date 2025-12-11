@@ -24,11 +24,11 @@ ColumnLayout {
             
             Repeater {
                 model: ListModel {
-                    ListElement { name: "System"; description: "Display, sound, notifications, power"; icon: "\udb80\udf22" }
-                    ListElement { name: "Devices"; description: "Bluetooth, printers, mouse"; icon: "\uf11c" }
-                    ListElement { name: "Network/Internet"; description: "Wi-Fi, airplane mode, VPN"; icon: "\ueb01" }
-                    ListElement { name: "Personalization"; description: "Background, lock screen, colors"; icon: "\uf1fc" }
-                    ListElement { name: "Apps"; description: "Uninstall, defaults, optional features"; icon: "\udb83\uddd0" }
+                    ListElement { name: "System"; description: "Display, sound, notifications, power"; icon: "\udb80\udf22"; pageLink: "SystemSettings.qml" }
+                    ListElement { name: "Devices"; description: "Bluetooth, printers, mouse"; icon: "\uf11c"; pageLink: "" }
+                    ListElement { name: "Network/Internet"; description: "Wi-Fi, airplane mode, VPN"; icon: "\ueb01"; pageLink: "" }
+                    ListElement { name: "Personalization"; description: "Background, lock screen, colors"; icon: "\uf1fc"; pageLink: "" }
+                    ListElement { name: "Apps"; description: "Uninstall, defaults, optional features"; icon: "\udb83\uddd0"; pageLink: "" }
                 }
                 
                 Button {
@@ -80,13 +80,7 @@ ColumnLayout {
                     text: model.icon + " " + model.name
                     
                     onClicked: {
-                        switch(model.name) {
-                            case "System":
-                                rootStack.push("SystemSettings.qml")
-                                break
-                            default:
-                                console.log("Page not defined")
-                        }
+                            rootStack.push(model.pageLink)
                     }
                 }
             }
