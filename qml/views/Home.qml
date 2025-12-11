@@ -93,7 +93,7 @@ ColumnLayout {
     function getCategorySource(categoryName) {
         // Map category names to QML files
         var sourceMap = {
-            "System": "SettingMenus/SystemSettings.qml",
+            "System": "SystemSettings.qml",
         }
         return sourceMap[categoryName] || ""
     }

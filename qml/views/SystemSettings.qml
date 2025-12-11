@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import components
 
 RowLayout {
     Rectangle {
@@ -37,6 +38,10 @@ RowLayout {
                     text: "Settings"
                     color: palette.active.text
                     font.pixelSize: 12
+                }
+
+                SidePanelButton {
+
                 }
             }
             

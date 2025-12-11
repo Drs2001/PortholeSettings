@@ -8,6 +8,7 @@ def main():
     app.setApplicationName("Settings App")
     
     engine = QQmlApplicationEngine()
+    engine.addImportPath("qml")
     
     # Create backend instance
     backend = SettingsBackend()
@@ -16,7 +17,7 @@ def main():
     engine.rootContext().setContextProperty('backend', backend)
 
     engine.quit.connect(app.quit)
-    engine.load("main.qml")
+    engine.load("qml/main.qml")
     
     sys.exit(app.exec())
 
