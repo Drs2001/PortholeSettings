@@ -6,7 +6,7 @@ Button {
     id: sidePanelButton
     required property string name
     required property string glyph
-    required property string pageLink
+    required property string pageIndex
 
     background: Rectangle {
         anchors.fill: parent
@@ -14,7 +14,8 @@ Button {
     }
 
     contentItem: Row {
-        anchors.centerIn: parent
+        anchors.fill: parent
+        anchors.leftMargin: 15 // TODO: Replace hardcoded margins with dynamic ones
         spacing: 15
         Text {
             anchors.verticalCenter: parent.verticalCenter

@@ -41,6 +41,7 @@ ColumnLayout {
                         color: "transparent"
                         border.color: settingsButton.hovered ? palette.active.highlight : "transparent"
                         border.width: 2
+                        radius: 5
                     }
                     
                     contentItem: RowLayout {
