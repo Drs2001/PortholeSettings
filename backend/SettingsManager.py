@@ -1,6 +1,6 @@
-from settingsmodels.DisplayModel import DisplayModel
-from Parser import Parser
+from .settingsmodels.DisplayModel import DisplayModel
+from .Parser import Parser
 
 class SettingsManager():
     def __init__(self):
-        super().__init__()
+        Parser.parse_file("~/.config/hypr/Settings.conf")
