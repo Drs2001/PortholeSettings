@@ -1,5 +1,5 @@
 import sys
-from Backend import SettingsBackend
+from backend.SettingsBackend import SettingsBackend
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 
