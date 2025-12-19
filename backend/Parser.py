@@ -19,8 +19,6 @@ class Parser():
                 match section:
                     case "#DISPLAY":
                         display.add_monitor(line)
-                    case "#WALLPAPER":
-                        print("WALLPAPER")
                     case "#INPUT":
                         print("INPUT")
                     case _:
